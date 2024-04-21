@@ -1,0 +1,185 @@
+@extends('layouts.main2')
+@section('container')
+<div class="flex justify-center items-center pt-24">
+    <h1 class="text-5xl font-extrabold w-9/12 text-center">{{ $title }}</h1>
+</div>
+<div class="flex justify-center items-center pt-10">
+    <div class="w-9/12 ">
+        <div class="pb-2">
+            <h4 class="text-lg text-justify pb-4">
+                Dalam pemrograman, perulangan digunakan untuk suatu aksi yang dilakukan berkali-kali dan memiliki pola yang sama. Pada perulangan akan dihadapkan pada suatu <b>kondisi pilihan</b> atau <b>syarat</b>.
+                Setiap kondisi memiliki dua kemungkinan; <b>benar (<i>true</i>)</b> atau <b>salah (<i>false</i>)</b>. Kondisi atau syarat dalam perulangan harus menggunakan <b>ekspresi <i>boolean</i></b>. 
+                Jika hasil dari ekspresi ini adalah benar, pernyataan yang ada dalam pengulangan akan terus dijalankan.
+            </h4>
+            <h4 class="text-lg text-justify pb-4">
+                Perbedaan utama antara percabangan dan perulangan adalah berapa kali pernyataan dijalankan. Percabangan hanya akan menjalankan pernyataan yang ada di dalam kondisi bernilai benar <b>compound statement</b>
+                ataupun kondisi bernilai salah <b>(alternative execution)</b> sebanyak satu kali. Perulangan akan menjalankan pernyataan berkali-kali selama ekspresi pada bagian syarat bernilai benar atau <i>true</i>.
+            </h4>
+            <h4 class="text-lg text-justify pb-4">
+                Dalam pemrograman Python memiliki struktur perulangan, yaitu <b>While</b>, <b>For</b> dan <b>Nested Loop</b>.
+                <ul class="list-decimal pl-10">
+                    <li><b>Perulangan While</b></li>
+                    Perulangan dengan perintah <b>while</b> digunakan untuk melakukan perulangan selama ekspresi bernilai benar atau <i>true</i>. 
+                    Perulangan While bisa digunakan baik untuk kasus dimana jumlah perulangan atau nilai rentang diketahui maupun untuk kasus dimana jumlah perulangan tidak diketahui. 
+                    Struktur perulangan while sebagai berikut:
+                    <div class="pl-10">
+                        <div class="w-52 p-3 bg-[#D9D9D9] rounded-md">
+                            <div class="pl-2">
+                                <h3 class="text-xl font-semibold font-[Montserrat] text-purple-800">while <span class="text-yellow-500">(<span class="text-green-500">ekspresi</span>)</span>:</h3>
+                                <h3 class="text-xl font-semibold font-[Montserrat] mx-5 text-gray-700">pernyataan1</h3>
+                                <h3 class="text-xl font-semibold font-[Montserrat] mx-5 text-gray-700">pernyataan2</h3>
+                                <h3 class="text-xl font-semibold font-[Montserrat] mx-5 text-gray-700">pernyataan3</h3>
+                                <h3 class="text-xl font-semibold font-[Montserrat] mx-5 text-gray-700">... dst</h3>
+                            </div>
+                        </div>
+                    </div>
+                    Contoh kode program struktur perulangan while:
+                    <div class="py-2">
+                        <div class="px-10">
+                            <div class="w-full p-3 bg-slate-700 rounded-lg">
+                                <h3 class="text-lg font-md font-[Montserrat] text-gray-400"># Inisialisasi variabel penghitung</h3>
+                                <h3 class="text-lg font-md font-[Montserrat] text-white">penghitung = <span class="text-rose-500">0</span></h3>
+                                <br>
+                                <h3 class="text-lg font-md font-[Montserrat] text-gray-400"># Perulangan while dengan kondisi penghitung kurang dari 5</h3>
+                                <h3 class="text-lg font-md font-[Montserrat] text-white"><span class="text-blue-500">while</span> penghitung < <span class="text-rose-500">5</span>:</h3>
+                                <h3 class="text-lg font-md font-[Montserrat] text-white"> <span class="text-yellow-500 pl-4">print</span>(<span class="text-green-500">"Nilai penghitung saat ini:"</span>, penghitung)</h3>
+                                <h3 class="text-lg font-md font-[Montserrat] text-white pl-4">penghitung += <span class="text-rose-500">1</span>:</h3>
+                                <br>
+                                <h3 class="text-lg font-md font-[Montserrat] text-white"> <span class="text-yellow-500">print</span>(<span class="text-green-500">"Perulangan selesai"</span>)</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center py-5">
+                        <video width="640" height="360" controls>
+                            <source src="assets/WHILE LOOPING.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <br>
+                    <li><b>Perulangan For</b></li>
+                    Perulangan For digunakna untuk melakukan perulangan dengan jumlah yang telah ditentukan sebelumnya atau rentang nilai yang diperbolehkan sebelum membuat algoritmanya. 
+                    Misalnya, harus melakukan pengulangan sebanyak 2 kali atau dilakukan selama nilai di antara 1 dan 10. Bentuk umum struktur perulangan for sebagai berikut:
+                    <div class="pl-10">
+                        <div class="w-72 p-3 bg-[#D9D9D9] rounded-md">
+                            <div class="pl-2">
+                                <h3 class="text-xl font-semibold font-[Montserrat] text-purple-500">for <span class="text-yellow-500"><<span class="text-green-500">target</span>></span> in <span class="text-yellow-500"><<span class="text-green-500">obyek</span>></span>:</h3>
+                                <h3 class="text-xl font-semibold font-[Montserrat] mx-5 text-gray-700">pernyataan</h3>
+                            </div>
+                        </div>
+                    </div>
+                    Dalam bentuk umum di atas, perulangan for memiliki 2 data, yaitu target dan obyek.
+                    <ul class="list-disc pl-10">
+                        <li><b>Target</b>, adalah variabel yang akan menampung setiap perulangan dari obyek.</li>
+                        <li><b>Obyek</b>, berisikan list sebagai kondisi yang menentukan perulangan.</li>
+                    </ul>
+                    Sebagai contoh, jika <b>obyek</b> berisi list bilangan dari 1 sampai 5, maka <b>target</b> akan menampung nilai isi dari list tersebut satu per satu.
+                    Contoh kode program bentuk umum struktur perulangan for:
+                    <div class="py-2">
+                        <div class="px-10">
+                            <div class="w-full p-3 bg-slate-700 rounded-lg">
+                                <h3 class="text-lg font-md font-[Montserrat] text-gray-400"># Definisikan sebuah list</h3>
+                                <h3 class="text-lg font-md font-[Montserrat] text-white">angka_list = [<span class="text-rose-500">1</span>, <span class="text-rose-500">2</span>, 
+                                    <span class="text-rose-500">3</span>, <span class="text-rose-500">4</span>, <span class="text-rose-500">5</span>]</h3>
+                                <br>
+                                <h3 class="text-lg font-md font-[Montserrat] text-gray-400"># Perulangan untuk mengakses setiap elemen dalam list</h3>
+                                <h3 class="text-lg font-md font-[Montserrat] text-white"><span class="text-blue-500">for</span> angka <span class="text-blue-500">in </span>angka_list:</h3>
+                                <h3 class="text-lg font-md font-[Montserrat] text-white"> <span class="text-yellow-500 pl-4">print</span>(angka)</h3>
+                            </div>
+                        </div>
+                    </div>
+                    Perulangan for juga bisa diisi dengan obyek menggunakan range dengan struktur sebagai berikut.
+                    <div class="pl-10">
+                        <div class="w-7/12 p-3 bg-[#D9D9D9] rounded-md">
+                            <div class="pl-2">
+                                <h3 class="text-xl font-semibold font-[Montserrat] text-purple-500">for <span class="text-yellow-500"><<span class="text-green-500">target</span>></span> 
+                                    in range<span class="text-yellow-500">(<span class="text-green-500">nilai awal, nilai akhir</span>)</span>:</h3>
+                                <h3 class="text-xl font-semibold font-[Montserrat] mx-5 text-gray-700">pernyataan</h3>
+                            </div>
+                        </div>
+                    </div>
+                    Atau
+                    <div class="pl-10">
+                        <div class="w-7/12 p-3 bg-[#D9D9D9] rounded-md">
+                            <div class="pl-2">
+                                <h3 class="text-xl font-semibold font-[Montserrat] text-purple-500">for <span class="text-yellow-500"><<span class="text-green-500">target</span>></span> 
+                                    in range<span class="text-yellow-500">(<span class="text-green-500">nilai awal, nilai akhir, beda</span>)</span>:</h3>
+                                <h3 class="text-xl font-semibold font-[Montserrat] mx-5 text-gray-700">pernyataan</h3>
+                            </div>
+                        </div>
+                    </div>
+                    Contoh kode programnya sebagai berikut:
+                    <div class="py-2">
+                        <div class="px-10">
+                            <div class="w-full p-3 bg-slate-700 rounded-lg">
+                                <h3 class="text-lg font-md font-[Montserrat] text-gray-400"># Perulangan untuk mengakses rentang angka dari 1 hingga 5</h3>
+                                <h3 class="text-lg font-md font-[Montserrat] text-white"><span class="text-blue-500">for</span> angka <span class="text-blue-500">in </span>
+                                    <span class="text-yellow-500">range</span>(<span class="text-rose-500">1</span>, <span class="text-rose-500">6</span>):</h3>
+                                <h3 class="text-lg font-md font-[Montserrat] text-white"> <span class="text-yellow-500 pl-4">print</span>(angka)</h3>
+                            </div>
+                        </div>
+                    </div>
+                    Atau
+                    <div class="py-2">
+                        <div class="px-10">
+                            <div class="w-full p-3 bg-slate-700 rounded-lg">
+                                <h3 class="text-lg font-md font-[Montserrat] text-gray-400"># Perulangan untuk mengakses angka dengan langkah 2 dari 1 hingga 10</h3>
+                                <h3 class="text-lg font-md font-[Montserrat] text-white"><span class="text-blue-500">for</span> angka <span class="text-blue-500">in </span>
+                                    <span class="text-yellow-500">range</span>(<span class="text-rose-500">1</span>, <span class="text-rose-500">11</span>, <span class="text-rose-500">2</span>):</h3>
+                                <h3 class="text-lg font-md font-[Montserrat] text-white"> <span class="text-yellow-500 pl-4">print</span>(angka)</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center py-5">
+                        <video width="640" height="360" controls>
+                            <source src="assets/FOR LOOPING.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <br>
+                    <li><b>Perulangan Nested Loop</b></li>
+                    Perulangan nested loop adalah perulangan di dalam perulangan. Berikut adalah bentuk umum dari perulangan nested loop. 
+                    <div class="pl-10">
+                        <div class="w-80 p-3 bg-[#D9D9D9] rounded-md">
+                            <div class="pl-3">
+                                <h3 class="text-xl font-semibold font-[Montserrat] text-purple-500">for <span class="text-yellow-500"><<span class="text-green-500">target</span>></span> in <span class="text-yellow-500"><<span class="text-green-500">obyek</span>></span>:</h3>
+                                <h3 class="text-xl font-semibold font-[Montserrat] text-purple-500 mx-5">for <span class="text-yellow-500"><<span class="text-green-500">target</span>></span> in <span class="text-yellow-500"><<span class="text-green-500">obyek</span>></span>:</h3>
+                                <h3 class="text-xl font-semibold font-[Montserrat] mx-10 text-gray-700">pernyataan</h3>
+                                <h3 class="text-xl font-semibold font-[Montserrat] mx-5 text-gray-700">pernyataan</h3>
+                            </div>
+                        </div>
+                    </div>
+                    Contoh kode program nested loop
+                    <div class="py-2">
+                        <div class="px-10">
+                            <div class="w-full p-3 bg-slate-700 rounded-lg">
+                                <h3 class="text-lg font-md font-[Montserrat] text-gray-400"># Nested Loop untuk Mencetak Pola Bintang</h3>
+                                <h3 class="text-lg font-md font-[Montserrat] text-white"><span class="text-blue-500">for</span> i <span class="text-blue-500">in </span>
+                                    <span class="text-yellow-500">range</span>(<span class="text-rose-500">5</span></span>):</h3>
+                                    <h3 class="text-lg font-md font-[Montserrat] text-white pl-4"><span class="text-blue-500">for</span> j <span class="text-blue-500">in </span>
+                                        <span class="text-yellow-500">range</span>(i + <span class="text-rose-500">1</span>):</h3>
+                                    <h3 class="text-lg font-md font-[Montserrat] text-white"> <span class="text-yellow-500 pl-8">print</span>(<span class="text-green-500">'*'</span>
+                                        , end=<span class="text-green-500">' '</span>)</h3>
+                                <h3 class="text-lg font-md font-[Montserrat] text-white"> <span class="text-yellow-500 pl-4">print</span>()</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center py-5">
+                        <video width="640" height="360" controls>
+                            <source src="assets/NESTED LOOP.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </ul>
+            </h4>
+        </div>
+        <div class="pb-20 flex justify-center">
+            <a href="{{ route('compile.looping.1') }}"><button class="border-4 border-[#395886] bg-[#638ECB] text-white py-2 w-72 rounded-md hover:bg-[#395886] font-medium">Ayo Latihan Live Coding</button></a>
+        </div>
+    </div>
+</div>
+@endsection
+
+@section('footer')
+<div class="bg-[#395886] fixed py-3 px-10 bottom-0 w-full">
+    <div class="flex justify-start items-center">
+        <a href="{{ route('material.branching') }}" class="text-white text-sm underline underline-offset-2"><i class="bi bi-chevron-double-left"></i> Struktur Percabangan Pemrograman Python</a>
+    </div>
+</div>
+@endsection
